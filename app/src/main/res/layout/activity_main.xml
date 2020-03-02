@@ -11,6 +11,7 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
+            android:id="@+id/topview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="25dp">
@@ -36,7 +37,7 @@
             <SearchView
                 android:id="@+id/searchbar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:clickable="true"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
@@ -48,8 +49,67 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_alignParentBottom="true">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topview"
+            android:layout_above="@+id/dock"
+            android:paddingHorizontal="25dp">
+
+            <TextView
+                android:id="@+id/txtPopular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/popularView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/txtPopular">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtRecents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recently Added"
+                android:textSize="20sp"
+                android:layout_below="@+id/popularView"/>
+
+            <RelativeLayout
+                android:id="@+id/recentsView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/txtRecents">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtMostDownloads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recently Added"
+                android:textSize="20sp"
+                android:layout_below="@+id/recentsView"/>
+
+            <RelativeLayout
+                android:id="@+id/mostDownloadsView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/txtMostDownloads">
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dock"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/textlines">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,30 +117,66 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <Button
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".20"/>
+                    android:layout_weight=".20">
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/home"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".20"/>
+                </RelativeLayout>
 
-                <Button
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".20"/>
+                    android:layout_weight=".20">
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="27dp"
+                        android:background="@drawable/category"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
-                <Button
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".20"/>
+                    android:layout_weight=".20">
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/download"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
-                <Button
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".20"/>
+                    android:layout_weight=".20">
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bookmark"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".20">
+                    <Button
+                        android:layout_width="27dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/library"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
             </LinearLayout>
 
