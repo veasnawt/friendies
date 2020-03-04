@@ -59,13 +59,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Popular"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:id="@+id/popularView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@id/txtPopular">
+                android:layout_below="@id/txtPopular"
+                android:paddingVertical="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent">
+
+                </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
 
@@ -81,7 +93,12 @@
                 android:id="@+id/recentsView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@id/txtRecents">
+                android:layout_below="@id/txtRecents"
+                android:paddingVertical="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
             </RelativeLayout>
 
@@ -89,7 +106,7 @@
                 android:id="@+id/txtMostDownloads"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Recently Added"
+                android:text="Most Downloads"
                 android:textSize="20sp"
                 android:layout_below="@+id/recentsView"/>
 
@@ -97,7 +114,12 @@
                 android:id="@+id/mostDownloadsView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@id/txtMostDownloads">
+                android:layout_below="@id/txtMostDownloads"
+                android:paddingVertical="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
             </RelativeLayout>
 
