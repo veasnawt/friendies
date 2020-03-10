@@ -33,7 +33,7 @@
                 app:civ_border_width="1dp"
                 app:civ_border_color="#eee"
                 android:layout_alignParentRight="true"/>
-            
+
             <SearchView
                 android:id="@+id/searchbar"
                 android:layout_width="match_parent"
@@ -47,11 +47,19 @@
 
         </RelativeLayout>
 
-        <fragment
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/topview"
-            android:layout_above="@+id/dock"/>
+            android:layout_above="@+id/dock"
+            android:paddingHorizontal="25dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/category_id_recyclerview"/>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/dock"
