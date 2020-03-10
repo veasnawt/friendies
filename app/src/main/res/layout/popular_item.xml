@@ -6,10 +6,15 @@
 
     <RelativeLayout
         android:layout_width="240dp"
-        android:layout_height="160dp"
-        android:background="@drawable/rounded_shape"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="140dp"
         android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/imgCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_shape"
+            android:backgroundTint="#333"/>
 
     </RelativeLayout>
 
